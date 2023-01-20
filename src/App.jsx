@@ -1,6 +1,5 @@
 import './App.css';
 import {useState} from "react";
-import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
@@ -14,7 +13,7 @@ function App() {
             return;
         }
         const item = {
-            id: Math.floor(uuidv4()),
+            id: Math.floor(Math.random()*1000),
             value: newItem
         }
 
@@ -38,7 +37,7 @@ function App() {
                     // Cancel the default action, if needed
                     e.preventDefault();
                     // Trigger the button element with a click
-                    addItem();
+                    document.getElementById("addButton").click();
                 }}}
                 id="myInput"
                 type="text"
